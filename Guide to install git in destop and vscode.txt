@@ -20,3 +20,7 @@ Branch Managering
 * Create new local branch: git branch <name>
 * Delete local Branch: git branch -D <name> 
 * Switch Local Branch: git checkot <name>
+
+Using VS Code
+* To open folder in vscode using Git Bash: code .
+ 
