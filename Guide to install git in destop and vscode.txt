@@ -11,7 +11,8 @@ GitHub SSH Windows Connection
 * Start Connection: ssh -T git@github.com
 * Connect Repository: git remote add origin git@github.com:user/repository
 * List remote Branches: git -r branch
-* Send to GitHub: git push origin master(yo can create the branch before and push sing another name)
+* Send to GitHub: git push origin master(you can create the branch before and push sing another name)
+* Receive from GitHub: git pull origin master
 
 Branch Managering
 * List Local branch: git branch
