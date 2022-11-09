@@ -1,4 +1,21 @@
-1. Config User: git config --global user.name "Julio Gomes"
-2. Config email: git config --global user.email your@email.com
-3. Start service: git init
+GitHub SSH Windows Connection
+* Config User: git config --global user.name "Julio Gomes"
+* Config email: git config --global user.email your@email.com
+* Start service: git init
+* Add Files: git add .
+* Commit Files: git commit -m "First Test"
+* Tag commit: git tag "version" "commit key"
+* Generate SSH Key: ssh-keygen -t rsa -C "yourgit@email.dev"
+* Generate SSH File: notepad ~/.ssh/id_rsa.pub
+* Paste in https://github.com/settings/ssh/new
+* Start Connection: ssh -T git@github.com
+* Connect Repository: git remote add origin git@github.com:user/repository
+* List remote Branches: git -r branch
+* Send to GitHub: git push origin master(yo can create the branch before and push sing another name)
 
+Branch Managering
+* List Local branch: git branch
+* List Remote ranch: git branch -r
+* Create new local branch: git branch <name>
+* Delete local Branch: git branch -D <name> 
+* Switch Local Branch: git checkot <name>
