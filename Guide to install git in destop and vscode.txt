@@ -1,0 +1,4 @@
+1. Config User: git config --global user.name "Julio Gomes"
+2. Config email: git config --global user.email your@email.com
+3. Start service: git init
+
