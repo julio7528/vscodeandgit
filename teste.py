@@ -90,4 +90,37 @@ menos escreva "Seu nome é curto"; se tiver entre 5 e 6 letras, escreva
 # if grande:
 #     print(f"O nome {nome} é grande com {len(nome)} letras")
 
+#Lista CRUD
 
+
+def cadastrar():
+    nome = input("Digite o Nome: ")
+    sobrenome = input("Digite o Sobrenome: ")
+    lista = {
+        'nome': nome,
+        'sobrenome': sobrenome,
+        }
+    return lista
+
+cadLista = cadastrar()
+
+cadPessoa = {
+    'Nome': cadLista['nome'],
+    'Sobrenome': cadLista['sobrenome'],
+}
+
+def imprimir():
+    print("Nome: " + cadPessoa['Nome'])
+    print("Sobrenome: " + cadPessoa['Sobrenome'])
+
+imprimir()
+
+print(f"Len of List: {cadPessoa.__len__()}")
+
+print(f"Keys {cadPessoa.keys()}")
+for keyOne in cadPessoa.keys():
+    print(f"List of Keys: {keyOne}")
+
+print(f"Values {cadPessoa.values()}")
+for keyOne in cadPessoa.values():
+    print(f"List of Values: {keyOne}")

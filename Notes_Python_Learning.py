@@ -162,3 +162,82 @@ nome = "joao da silva"
 outra_variavel = nome
 outra_variavel = f'{outra_variavel[:3]}ABC{outra_variavel[4:]}'
 print(outra_variavel)
+
+#Function returning variables
+
+def funcao(valor1, valor2):
+    print(valor1, valor2)
+    resultado = valor1 + valor2
+    return resultado
+
+resultadoFora = funcao(10, 10) #every function need be called in a variable
+
+print(resultadoFora)
+
+#Function Using Arguments
+
+def funcao(*args): #using arguments executing a function - like print
+    for i in args:
+        print(i)
+funcao(10,20,30,40,50,60)
+
+def funcao2(*args): #using arguments using a return
+    resultado = 0
+    for i in args:
+        resultado = resultado + i
+    return resultado
+resultadoFora = funcao2(10,20,30,40,50)
+print(resultadoFora)
+        
+    
+"""
+Higher Order Functions
+Funções de primeira classe
+"""
+def soma(*args):
+    resultado=0
+    for i in args:
+        resultado = resultado + i
+    print(resultado)
+    return resultado
+
+def somar(soma, *args): #Está chamando a função soma dentro de outra função
+    print('terminou')
+
+somar(soma(10,20,30,40)) #Quando executar, o resultado será o valor da soma e depois o print
+
+"""
+Closure e funções que retornam outras funções
+"""
+
+def criar_saudacao(saudacao):
+    def saudar(nome):
+        return f'{saudacao}, {nome}!'
+    return saudar
+
+
+falar_bom_dia = criar_saudacao('Bom dia')
+falar_boa_noite = criar_saudacao('Boa noite')
+
+for nome in ['Maria', 'Joana', 'Luiz']:
+    print(falar_bom_dia(nome))
+    print(falar_boa_noite(nome))
+
+#Multiplicação usando Closure
+def multiplicador(numero):
+    def valor(quantidade):
+        i = 1
+        quantidade += 1
+        while i < quantidade:
+            resultado = numero * i
+            print(f'{resultado} = {numero} * {i}')
+            i += 1
+            if i < (quantidade):
+                continue
+            else:
+                return resultado
+    return valor
+
+multiplicacao = multiplicador(2)
+
+multiplicacao(10)
